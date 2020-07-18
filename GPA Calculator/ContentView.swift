@@ -138,10 +138,12 @@ struct ContentView: View {
                         Spacer()
                         Button(action: {
                             // remove a class
-                            self.grades.removeLast()
-                            self.gradeVals.removeLast()
-                            self.levelVals.removeLast()
-                            self.idCount -= 1
+                            if self.idCount > 1 {
+                                self.grades.removeLast()
+                                self.gradeVals.removeLast()
+                                self.levelVals.removeLast()
+                                self.idCount -= 1
+                            }
                         }) {
                             Image(systemName: "minus")
                             Text("Remove class")
