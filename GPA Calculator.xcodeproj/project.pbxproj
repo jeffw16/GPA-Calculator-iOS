@@ -14,6 +14,7 @@
 		00D6427324C29F4B0002B553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00D6427224C29F4B0002B553 /* Assets.xcassets */; };
 		00D6427624C29F4B0002B553 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00D6427524C29F4B0002B553 /* Preview Assets.xcassets */; };
 		00D6427924C29F4B0002B553 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00D6427724C29F4B0002B553 /* LaunchScreen.storyboard */; };
+		00D6428124C2A3F30002B553 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6428024C2A3F30002B553 /* Grade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		00D6427524C29F4B0002B553 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		00D6427824C29F4B0002B553 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00D6427A24C29F4B0002B553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00D6428024C2A3F30002B553 /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				00D6427A24C29F4B0002B553 /* Info.plist */,
 				00D6426D24C29F4A0002B553 /* GPA_Calculator.xcdatamodeld */,
 				00D6427424C29F4B0002B553 /* Preview Content */,
+				00D6428024C2A3F30002B553 /* Grade.swift */,
 			);
 			path = "GPA Calculator";
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				00D6426A24C29F4A0002B553 /* AppDelegate.swift in Sources */,
 				00D6426C24C29F4A0002B553 /* SceneDelegate.swift in Sources */,
 				00D6427124C29F4A0002B553 /* ContentView.swift in Sources */,
+				00D6428124C2A3F30002B553 /* Grade.swift in Sources */,
 				00D6426F24C29F4A0002B553 /* GPA_Calculator.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
