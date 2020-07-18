@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00D6426624C29F4A0002B553 /* GPA Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPA Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00D6426624C29F4A0002B553 /* GPA Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPA Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D6426924C29F4A0002B553 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00D6426B24C29F4A0002B553 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		00D6426E24C29F4A0002B553 /* GPA_Calculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GPA_Calculator.xcdatamodel; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		00D6426724C29F4A0002B553 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				00D6426624C29F4A0002B553 /* GPA Calculator.app */,
+				00D6426624C29F4A0002B553 /* GPA Calc.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,7 +98,7 @@
 			);
 			name = "GPA Calculator";
 			productName = "GPA Calculator";
-			productReference = 00D6426624C29F4A0002B553 /* GPA Calculator.app */;
+			productReference = 00D6426624C29F4A0002B553 /* GPA Calc.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -297,12 +297,13 @@
 				DEVELOPMENT_TEAM = 3CX5BHYB2J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "GPA Calculator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mywikis.GPA-Calculator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "GPA Calc";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,12 +318,13 @@
 				DEVELOPMENT_TEAM = 3CX5BHYB2J;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "GPA Calculator/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mywikis.GPA-Calculator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "GPA Calc";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
