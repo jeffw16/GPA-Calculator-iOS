@@ -48,7 +48,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.clear.edgesIgnoringSafeArea(.all).onTapGesture {
+                Color.yellow.edgesIgnoringSafeArea(.all).onTapGesture {
                     self.endEditing(true)
                 }
                 VStack {
