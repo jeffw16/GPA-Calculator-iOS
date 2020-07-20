@@ -46,12 +46,15 @@ struct ContentView: View {
     @State private var idCount: Int = 7
     
     var body: some View {
-        NavigationView {
             ZStack {
                 Color.yellow.edgesIgnoringSafeArea(.all).onTapGesture {
                     self.endEditing(true)
                 }
                 VStack {
+                    ScrollView {
+                    Text("Mactown GPA Calculator")
+                        .font(.largeTitle)
+                        .bold()
                     Spacer()
                     HStack {
                         Text("GPA max for Regular/Academic classes:").frame(minWidth: 250, idealWidth: 250, maxWidth: 250, alignment: .leading)
@@ -122,7 +125,11 @@ struct ContentView: View {
                         self.weightedGpa = String(format: "%.4f", quotient)
                     }) {
                         Text("Calculate GPA")
-                    }
+                    }.font(.system(size: 17, weight: .bold))
+                        .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                        .background(Color(UIColor.systemBlue))
+                        .cornerRadius(15)
+                        .foregroundColor(.white)
                     HStack {
                         Spacer()
                         Button(action: {
@@ -134,7 +141,11 @@ struct ContentView: View {
                         }) {
                             Image(systemName: "plus")
                             Text("Add class")
-                        }
+                        }.font(.body)
+                            .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                            .background(Color(UIColor.systemBlue))
+                            .cornerRadius(15)
+                            .foregroundColor(.white)
                         Spacer()
                         Button(action: {
                             // remove a class
@@ -147,28 +158,36 @@ struct ContentView: View {
                         }) {
                             Image(systemName: "minus")
                             Text("Remove class")
-                        }
+                        }.font(.body)
+                            .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                            .background(Color(UIColor.systemBlue))
+                            .cornerRadius(15)
+                            .foregroundColor(.white)
                         Spacer()
+                    }.onTapGesture {
+                        self.endEditing(true)
                     }
-                    ScrollView {
-                        ForEach(grades, id: \.id) { grade in
-                            HStack {
-                                Text("Class \(grade.id! + 1)")
-                                    .frame(minWidth: 75, idealWidth: 75, maxWidth: 75, alignment: .trailing)
-                                TextField("\(grade.id!)", text: self.$gradeVals[grade.id!]).textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .keyboardType(.decimalPad)
-                                    .frame(minWidth: 50, idealWidth: 100, maxWidth: 100, alignment: .trailing)
-                                Picker("level\(grade.id!)", selection: self.$levelVals[grade.id!]) {
-                                    Text("Regular").tag(Level.reg)
-                                    Text("Honors").tag(Level.hon)
-                                    Text("AP").tag(Level.ap)
-                                }.pickerStyle(SegmentedPickerStyle())
-                            }
+                    ForEach(grades, id: \.id) { grade in
+                        HStack {
+                            Text("Class \(grade.id! + 1)")
+                                .frame(minWidth: 75, idealWidth: 75, maxWidth: 75, alignment: .trailing)
+                            TextField("\(grade.id!)", text: self.$gradeVals[grade.id!]).textFieldStyle(RoundedBorderTextFieldStyle())
+                                .keyboardType(.decimalPad)
+                                .frame(minWidth: 50, idealWidth: 100, maxWidth: 100, alignment: .trailing)
+                            Picker("level\(grade.id!)", selection: self.$levelVals[grade.id!]) {
+                                Text("Regular").tag(Level.reg)
+                                Text("Honors").tag(Level.hon)
+                                Text("AP").tag(Level.ap)
+                            }.pickerStyle(SegmentedPickerStyle())
                         }
                     }
+                }.onTapGesture {
+                    self.endEditing(true)
                 }
-            }.navigationBarTitle("GPA Calculator")
-        }
+            }.onTapGesture {
+                self.endEditing(true)
+            }
+        }.colorScheme(.light)
     }
 }
 
